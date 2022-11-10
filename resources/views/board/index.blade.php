@@ -1,4 +1,4 @@
-@extends('layouts,helloapp')
+@extends('layouts.helloapp')
 
 @section('title', 'Board.index')
 
@@ -9,10 +9,11 @@
 
 @section('content')
     <table>
-        <tr><th>Data</th></tr>
-        @foreach (items as item)
+        <tr><th>Message</th><th>Name</th></tr>
+        @foreach ($items as $item)
             <tr>
-                <td>{{$items as $item}}</td>
+                <td>{{$item->message}}</td>
+                <td>{{$item->person->name}}</td>
             </tr>
         @endforeach
     </table>
