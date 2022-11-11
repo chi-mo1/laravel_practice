@@ -40,3 +40,4 @@ Route::post('person/del', 'App\Http\Controllers\PersonController@remove');
 Route::get('board', 'App\Http\controllers\BoardController@index');
 Route::get('board/add', 'App\Http\controllers\BoardController@add');
 Route::post('board/add', 'App\Http\controllers\BoardController@create');
+Route::resource('rest', 'App\Http\controllers\RestappController');
